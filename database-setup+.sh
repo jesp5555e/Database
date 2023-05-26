@@ -4,7 +4,7 @@
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
 
 # Installer phpmyadmin
-yum install phpmyadmin
+yum install phpmyadmin -y
 
 # Installer nødvendige pakker
 yum install httpd php php-mysqlnd mod_ssl mysql yum-utils -y
@@ -22,7 +22,7 @@ echo gpgkey=https://download.webmin.com/jcameron-key.asc >> /etc/yum.repos.d/web
 rpm --import https://download.webmin.com/jcameron-key.asc
 
 # Installer webmin
-yum install webmin
+yum install webmin -y
 
 # Start webmin-tjenesten
 systemctl start webmin
