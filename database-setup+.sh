@@ -82,6 +82,7 @@ systemctl enable firewalld
 firewall-cmd --permanent --add-service=https ;
 firewall-cmd --permanent --add-service=http ;
 firewall-cmd --permanent --add-port=3306/tcp ;
+firewall-cmd --permanent --add-port=10000/tcp ;
 firewall-cmd --reload
 
 echo "DATABASE setup + completed."
