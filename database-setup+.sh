@@ -51,8 +51,10 @@ echo "</VirtualHost>" >> /etc/httpd/conf/httpd.conf
 systemctl enable httpd
 systemctl start httpd
 
+yum install mariadb-common -y
+
 # Installer MariaDB-server
-yum install mariadb-server mariadb-common  -y
+yum install mariadb-server -y
 
 # Start MariaDB-tjenesten
 service mariadb start
