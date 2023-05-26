@@ -7,7 +7,7 @@ yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.r
 yum install phpmyadmin -y
 
 # Installer nødvendige pakker
-yum install httpd php php-mysqlnd mod_ssl mysql yum-utils -y
+yum install httpd php php-mysqlnd mod_ssl yum-utils -y
 
 # Tilføger et repo
 touch /etc/yum.repos.d/webmin.repo
