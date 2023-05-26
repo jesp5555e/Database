@@ -52,7 +52,7 @@ systemctl enable httpd
 systemctl start httpd
 
 # Installer MariaDB-server
-yum install mariadb-server -y
+yum install mariadb-server mariadb-common  -y
 
 # Start MariaDB-tjenesten
 service mariadb start
