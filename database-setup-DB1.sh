@@ -59,9 +59,17 @@ yum install mariadb-server -y
 # Start MariaDB-tjenesten
 service mariadb start
 
+# Add users
+useradd arvi0086
+useradd jesp555e
+useradd jani1631
+echo "arvi0086:Kode1234!" | chpasswd
+echo "jesp555e:Kode1234!" | chpasswd
+echo "jani1631:Kode1234!" | chpasswd
+
 # Konfigurer MariaDB
 mysql -u root -e "CREATE DATABASE Arvin_Abdi;"
-mysql -u root -e "GRANT ALL PRIVILEGES ON Arvin_Abdi.* TO 'arbi0086'@'%' IDENTIFIED BY 'Kode1234!';"
+mysql -u root -e "GRANT ALL PRIVILEGES ON Arvin_Abdi.* TO 'arvi0086'@'%' IDENTIFIED BY 'Kode1234!';"
 mysql -u root -e "CREATE DATABASE Jesper_Lamborg;"
 mysql -u root -e "GRANT ALL PRIVILEGES ON Jesper_Lamborg.* TO 'jesp555e'@'%' IDENTIFIED BY 'Kode1234!';"
 mysql -u root -e "CREATE DATABASE Janick_Hansen;"
